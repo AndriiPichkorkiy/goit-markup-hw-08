@@ -1,0 +1,26 @@
+// .container {
+//   width: 1200px;
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   margin: auto;
+//   // the debug
+//   // outline: 1px solid tomato;
+// }
+
+.container {
+  width: 480px;
+
+  @include tablet {
+    // background-color: chartreuse;
+    width: 768px;
+  }
+
+  @include desktop {
+    // background-color: darkgoldenrod;
+    width: 1200px;
+  }
+
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
