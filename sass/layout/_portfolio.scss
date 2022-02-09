@@ -1,12 +1,29 @@
 .portfolio-conteinter {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include tablet {
+  }
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .filters {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin: 0 auto 34px auto;
+  height: 91px;
+
+  @include tablet {
+  }
+
+  @include desktop {
+    height: inherit;
+    justify-content: center;
+  }
 }
 
 .filters__filter {
@@ -45,13 +62,31 @@
 .projects_project {
   box-sizing: border-box;
   border: 1px solid #eeeeee;
+  width: calc(100vw - 30px);
+  margin-bottom: 30px;
 
   &:not(:nth-child(3n)) {
-    margin-right: 30px;
+    
+    @include tablet {
+    }
+  
+    @include desktop {
+      margin-right: 30px;
+    }
   }
 
   &:nth-last-child(n + 4) {
-    margin-bottom: 30px;
+    
+    @include tablet {
+    }
+  
+    @include desktop {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
   }
 
   &:hover {
@@ -100,13 +135,26 @@
 
 .projects__wrap {
   position: relative;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: auto;
 
   overflow: hidden;
 
+  & > img {
+    width: 100%;
+    height: auto;
+  }
+
   &:hover > .projects__img-hover {
     top: 0;
+  }
+
+  @include tablet {
+  }
+
+  @include desktop {
+    width: 370px;
+    height: 294px;
   }
 }
 

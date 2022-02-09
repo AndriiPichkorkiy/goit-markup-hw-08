@@ -24,8 +24,9 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 528px;
-  height: 581px;
+  width: calc(100vw - 30px);
+  height: calc(100vh - 93px - 94px);
+  min-height: calc(100vh - 30px);
   background-color: #fff;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -34,6 +35,14 @@
 
   @extend %tt;
   transition-property: transform opacity;
+
+  @include tablet {
+  }
+
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__close-buttom {
@@ -146,26 +155,45 @@
 .form__field-check {
   height: 24px;
   margin-top: 20px;
-  margin-left: calc(54px - 41px);
-  margin-right: calc(51px - 39px);
+ 
+
+  @include tablet {
+  }
+
+  @include desktop {
+    margin-left: calc(54px - 41px);
+    margin-right: calc(51px - 39px);
+  }
 }
 
 .form__input-check {
   display: block;
+ 
+}
+
+.form__field-check--text {
   text-align: right;
   font-family: Roboto;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
   /* identical to box height, or 171% */
 
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--text-description-color);
+
+  @include tablet {
+  }
+
+  @include desktop {
+    font-size: 14px;
+  line-height: calc(24 / 14);
+  }
 }
 
 .form__icons-check {
   position: absolute;
-  top: 5px;
+  top: 0px;
   left: 0px;
   width: 16px;
   height: 15px;
@@ -173,6 +201,13 @@
   --color1: transparent;
   border: 1px solid #212121;
   border-radius: 25%;
+
+  @include tablet {
+  }
+
+  @include desktop {
+    top: 5px;
+  }
 }
 
 .form__check {
@@ -189,11 +224,7 @@
 }
 
 .form__link-rules {
-  font-family: Roboto;
-  font-size: 14px;
-  line-height: calc(24 / 14);
-
-  letter-spacing: 0.03em;
+  @extend .form__field-check--text;
   text-decoration-line: underline;
 
   color: var(--brend-color);

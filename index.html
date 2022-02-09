@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Студия</title>
     <link rel="stylesheet" href="https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css">
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +46,46 @@
             </li>
         </ul>
         </div>
-        
+        <!-- mobile menu -->
+        <!-- the button menu -->
+        <button class="menu--icon" menu-modal-open>
+            <svg  width="40px" height="40px">
+                <use href="./images/icons.svg#icon-menu">
+                </use>
+            </svg>
+        </button>
+        <!-- the mobile menu -->
+        <div class="menu-is-hidden menu-modal" menu-modal>
+            <button class="menu__close-buttom" menu-modal-close>
+                <svg class="" width="18.67px" height="18.67px">
+                    <use href="./images/icons.svg#icon-close">
+                    </use>
+                </svg>
+            </button>
+            <ul class="list nav--mobile__list">
+                <li class="nav--mobile__item"><a href="./index.html" class="link nav--mobile__link current--mobile">Студия</a></li>
+                <li class="nav--mobile__item"><a href="./portfolio.html" class="link nav--mobile__link ">Портфолио</a></li>
+                <li class="nav--mobile__item"><a href="" class="link nav--mobile__link ">Контакты</a></li>
+            </ul>
+            <ul class="list contacts--mobile">
+                <li class="contacts--mobile__item">
+                    <a href="tel:+380961111111" class="link contacts--mobile__tel ">
+                        <span>+38 096 111 11 11</span>
+                    </a>
+                </li>
+                <li class="contacts--mobile__item">
+                    <a href="mailto:info@devstudio.com" class="link contacts--mobile__mail ">
+                        info@devstudio.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="social--mobile list">
+                <li><span><a class = "social--mobile__link link" href="">Twitter</a></span></li>
+                <li><span><a class = "social--mobile__link link" href="">Facebook</a></span></li>
+                <li><span><a class = "social--mobile__link link" href="">LinkedIn</a></span></li>
+                <li><span><a class = "social--mobile__link link" href="">Instagram</a></span></li>
+            </ul>
+        </div>
     </header>
     <main>
         <!-- order our service -->
@@ -455,7 +493,11 @@
                     
                 </div>
                 <div class="form__field form__field-check">
-                    <label class="form__input-check" for="form__user-check">Соглашаюсь с рассылкой и принимаю <a href="#" class="form__link-rules">Условия договора</a>
+                    <label class="form__input-check form__field-check--text" for="form__user-check">
+                        
+                        Соглашаюсь с рассылкой и принимаю 
+                        <a href="#" class="form__link-rules">Условия договора</a>
+                    
                     <input type="checkbox" class="form__check" name="form__user-check" required id="form__user-check" />
                     <svg class="form__icons-check" disabled>
                         <use href="./images/icons.svg#icon-check">
@@ -472,14 +514,14 @@
         
     
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <script>
         {
             let fun = function () {
-document.getElementsByTagName('body')[0].removeAttribute('class');
+                document.getElementsByTagName('body')[0].removeAttribute('class');
             }
             window.onload = fun;
         }
-    
     </script>
 </body>
 </html>

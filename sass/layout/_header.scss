@@ -9,14 +9,23 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
+
+  height: 60px;
 }
 
 .nav__list,
 .contacts {
-  display: flex;
+  @include tablet {
+  }
+
+  @include desktop {
+    display: flex;
+  }
+  display: none;
   justify-content: space-between;
   align-items: center;
   position: relative;
+
 }
 
 .nav__list--end {
@@ -70,3 +79,5 @@
 .contacts__icon {
   margin-right: 10px;
 }
+
+

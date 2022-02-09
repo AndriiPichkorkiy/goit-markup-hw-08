@@ -1,11 +1,8 @@
 .about {
-  @include tablet {
-    display: none;
+  @include desktop {
+    display: block;
   }
-
-  @include tel {
-    display: none;
-  }
+  display: none;
   padding-top: 0;
   background-color: var(--bg-about);
   margin-top: 94px;

@@ -12,4 +12,4 @@
     refs.modal.classList.toggle('is-hidden');
   }
 })();
-console.log("hello mentor!")
+console.log("modal.js is loaded")
