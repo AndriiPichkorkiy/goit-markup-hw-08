@@ -19,13 +19,26 @@
   text-align: center;
   justify-items: center;
   @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   @include desktop {
     flex-direction: row;
-    justify-content: left;
+    // justify-content: left;
     min-width: 1280px;
     max-width: auto;
+  }
+}
+
+.footer__column-1 {
+  @include tablet {
+    width: calc(50% - 76px);
+  }
+  @include desktop {
+    width: auto;
+    text-align: left;
   }
 }
 
@@ -61,11 +74,14 @@
   margin-top: calc(60px);
 
   @include tablet {
+    width: calc(50% - 76px);
+    margin-top: 0;
   }
 
   @include desktop {
     margin-left: 70px;
     margin-top: calc(72px - 60px);
+    width: auto;
   }
 }
 
@@ -151,7 +167,6 @@
   }
 
   @include desktop {
-    
     width: inherit;
   }
 }

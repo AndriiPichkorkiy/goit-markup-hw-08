@@ -8,20 +8,19 @@
 // }
 
 .container {
-  width: 480px;
+  width: 100%;
 
   @include tablet {
     // background-color: chartreuse;
-    width: 768px;
+    width: 100%;
   }
 
   @include desktop {
     // background-color: darkgoldenrod;
     width: 1200px;
-    
   }
   padding-left: 15px;
   padding-right: 15px;
-  
+
   margin: auto;
 }
