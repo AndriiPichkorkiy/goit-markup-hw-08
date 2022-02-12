@@ -525,6 +525,7 @@ img {
   justify-content: space-between;
   width: 356px;
   height: 22px;
+  margin-top: 64px;
 }
 
 .social--mobile__link {
