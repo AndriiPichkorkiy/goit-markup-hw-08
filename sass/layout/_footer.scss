@@ -218,8 +218,10 @@
   position: relative;
 
   height: 50px;
+  width: 200px;
   margin-left: 12px;
   padding-left: 29px;
+  padding-right: 62px;
   padding-top: 10px;
   padding-bottom: 10px;
   background: var(--brend-color);
@@ -242,10 +244,7 @@
 
     color: var(--brend-color-3);
   }
-  @include tel {
-    margin: auto;
-  }
-
+  margin: auto;
   @include tablet {
   }
 
